@@ -1,0 +1,34 @@
+<div>
+    <div *ngIf="currentData.id" class="edit-form">
+      <h4>Edit your Signature</h4>
+      <form>
+        <div class="form-group">
+          <label for="user_Ename">Name</label>
+          <input type="text" class="form-control" id="user_Ename" required [(ngModel)]="currentData.user_Ename" name="user_Ename"/>
+        </div>
+        <div class="form-group">
+          <label for="user_Aname">الاسم بالكامل</label>
+          <input type="text" class="form-control" id="user_Aname" required [(ngModel)]="currentData.user_Aname" name="user_Aname"/>
+        </div>
+  
+      </form>
+  
+      <button class="badge badge-danger mr-2" (click)="deleteData()">
+        Delete
+      </button>
+  
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updateSignature()"
+      >
+        Update
+      </button>
+      <p>{{ message }}</p>
+    </div>
+  
+    <div *ngIf="!currentData.id">
+      <br />
+      <p>Cannot access this Signature...</p>
+    </div>
+  </div>

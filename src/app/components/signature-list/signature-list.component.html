@@ -1,0 +1,34 @@
+<div class="list row">
+    <div class="col-md-6">
+      <h4>Signature List</h4>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let sign of signature; let i = index" [class.active]="i == currentIndex" (click)="setActiveData(sign, i)">
+          {{ sign.user_Ename }}
+        </li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <br>
+    <div class="col-md-6">
+      <div *ngIf="currentSignature">
+        <!-- image goes here -->
+        <div>
+            {{ currentSignature.user_Ename }}
+        </div>
+        <div>
+          {{ currentSignature.user_Aname }}
+        </div>
+
+        <a class="badge badge-warning" routerLink="/signature/{{ currentSignature.id }}">
+          Edit
+        </a>
+      </div>
+  
+      <div *ngIf="!currentSignature">
+        <br />
+        <p>Please choose your name to generate...</p>
+      </div>
+    </div>
+  </div>

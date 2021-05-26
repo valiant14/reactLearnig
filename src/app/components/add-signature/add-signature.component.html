@@ -1,0 +1,43 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="user_Ename">Fullname</label>
+          <input type="text" class="form-control" id="user_Ename" required [(ngModel)]="dataDetails.user_Ename" name="user_Ename"/>
+        </div>
+        <div class="form-group">
+            <label for="user_Aname">الاسم بالكامل</label>
+            <input type="text" class="form-control" id="user_Aname" required [(ngModel)]="dataDetails.user_Aname" name="user_Aname"/>
+          </div>
+          <div class="form-group">
+            <label for="en_jobTitle">Job Title</label>
+            <input type="text" class="form-control" id="en_jobTitle" required [(ngModel)]="dataDetails.en_jobTitle" name="en_jobTitle"/>
+          </div>
+          <div class="form-group">
+            <label for="ar_jobTitle">مسمى وظيفي</label>
+            <input type="text" class="form-control" id="ar_jobTitle" required [(ngModel)]="dataDetails.ar_jobTitle" name="ar_jobTitle"/>
+          </div>
+          <div class="form-group">
+            <label for="Telephone">Telephone</label>
+            <input type="text" class="form-control" id="Telephone" required [(ngModel)]="dataDetails.Telephone" name="Telephone"/>
+          </div>
+          <div class="form-group">
+            <label for="Extension">Extension</label>
+            <input type="text" class="form-control" id="Extension" required [(ngModel)]="dataDetails.Extension" name="Extension"/>
+          </div>
+          <div class="form-group">
+            <label for="Mobile">Mobile</label>
+            <input type="text" class="form-control" id="Mobile" required [(ngModel)]="dataDetails.Mobile" name="Mobile"/>
+          </div>
+          <div class="form-group">
+            <label for="user_email">Email</label>
+            <input type="text" class="form-control" id="user_email" required [(ngModel)]="dataDetails.user_email" name="user_email"/>
+          </div>
+        <button (click)="saveData()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Data Signature was submitted successfully!</h4>
+      </div>
+    </div>
+  </div>
