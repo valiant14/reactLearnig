@@ -8,19 +8,23 @@ import { SignatureDetailsComponent } from './components/signature-details/signat
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SignatureListComponent } from './components/signature-list/signature-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SinglePageComponent } from './components/single-page/single-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddSignatureComponent,
     SignatureDetailsComponent,
-    SignatureListComponent
+    SignatureListComponent,
+    SinglePageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

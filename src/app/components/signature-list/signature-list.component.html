@@ -1,25 +1,134 @@
-<div class="list row">
-    <div class="col-md-6">
-      <h4>Signature List</h4>
-      <ul class="list-group">
-        <li class="list-group-item" *ngFor="let sign of signature; let i = index" [class.active]="i == currentIndex" (click)="setActiveData(sign, i)">
-          {{ sign.user_Ename }}
-        </li>
-      </ul>
+<div class="list col">
+    <div class="col-md-12">
+      <h4>Signature Table</h4>
+    <table class="table justify-content-center">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">الاسم بالكامل</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let sign of signature; let i = index" [class.active]="i == currentIndex" (click)="setActiveData(sign, i)">
+          <td>{{ sign.id }}</td>
+          <td>{{ sign.user_Ename }}</td>
+          <td>{{ sign.user_Aname }}</td>
+        </tr>
+        <tr>
+      </tbody>
+    </table>
     </div>
-
-    <hr>
-
-    <br>
-    <div class="col-md-6">
+  
+  <div class="card">
+    <div class="col-md-12">
       <div *ngIf="currentSignature">
-        <!-- image goes here -->
-        <div>
-            {{ currentSignature.user_Ename }}
-        </div>
-        <div>
-          {{ currentSignature.user_Aname }}
-        </div>
+        <!-- All body code goes here -->
+        <div lang="EN-US" style="word-wrap:break-word">
+          <div class="x_WordSection1">
+          <p class="x_MsoNormal" align="right" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;text-align:right">
+          <br>
+          </p>
+          <table class="x_MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse" currentrightborder="1206" currentbottomborder="542">
+          <tbody>
+          <tr style="height:81.25pt">
+          <td width="236" colspan="2" valign="top" style="width:177.35pt; padding:0in 5.4pt 0in 5.4pt; height:81.25pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <b><span style="color: rgb(47, 84, 150);">&nbsp;</span></b></p>
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <b><span style="color: rgb(47, 84, 150);"><img width="81" height="75" id="x_Picture_x0020_2" style="width:.8437in; height:.7812in" data-outlook-trace="F:1|T:1" src="https://www.seder.sa/wp-content/uploads/2021/02/seder.png"></span></b></p>
+          </td>
+          <td width="190" colspan="3" valign="top" style="width:142.7pt; padding:0in 5.4pt 0in 5.4pt; height:81.25pt">
+          <p class="x_MsoNormal" align="right" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;text-align:right">
+          <b><span lang="AR-SA" dir="RTL" style="font-family: &quot;Times New Roman&quot;, serif; color: rgb(47, 84, 150);">&nbsp;</span></b></p>
+          </td>
+          </tr>
+          <tr style="height:12.95pt">
+          <td width="236" colspan="2" valign="top" style="width:177.35pt; padding:0in 5.4pt 0in 5.4pt; height:12.95pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <b><span style="font-size:12.0pt">{{currentSignature.user_Ename}} </span></b><b><span style="font-size: 12pt; color: rgb(47, 84, 150);"></span></b></p>
+          </td>
+          <td width="190" colspan="3" valign="top" style="width:142.7pt; padding:0in 5.4pt 0in 5.4pt; height:12.95pt">
+          <p class="x_MsoNormal" align="right" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;text-align:right">
+          <b><span style="font-size:12.0pt; font-family:&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;<span lang="AR-SA" dir="RTL">{{currentSignature.user_Aname}}
+          </span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"></span>
+          <span lang="AR-SA" dir="RTL"></span></span></b><b><span lang="EN-GB" style="font-size: 12pt; font-family: &quot;Times New Roman&quot;, serif; color: rgb(47, 84, 150);"></span></b></p>
+          </td>
+          </tr>
+          <tr style="height:13.5pt">
+          <td width="236" colspan="2" valign="top" style="width:177.35pt; padding:0in 5.4pt 0in 5.4pt; height:13.5pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <i><span style="font-size: 12pt; color: rgb(64, 64, 64);">{{currentSignature.en_jobTitle}}</span>
+          </i><i><span style="font-size: 12pt; color: rgb(64, 64, 64);"></span></i></p>
+          </td>
+          <td width="190" colspan="3" valign="top" style="width:142.7pt; padding:0in 5.4pt 0in 5.4pt; height:13.5pt">
+          <p class="x_MsoNormal" align="right" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;text-align:right">
+          <span lang="AR-SA" dir="RTL" style="font-size:12.0pt; font-family:&quot;Times New Roman&quot;,serif">{{currentSignature.ar_jobTitle}}
+          <span style="color: rgb(118, 113, 113);"></span></span></p>
+          </td>
+          </tr>
+          <tr style="height:12.95pt">
+          <td width="236" colspan="2" valign="top" style="width:177.35pt; padding:0in 5.4pt 0in 5.4pt; height:12.95pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <span lang="AR-SA" dir="RTL" style="font-size: 12pt; font-family: Arial, sans-serif; color: rgb(118, 113, 113);">&nbsp;</span></p>
+          </td>
+          <td width="190" colspan="3" valign="top" style="width:142.7pt; padding:0in 5.4pt 0in 5.4pt; height:12.95pt">
+          <p class="x_MsoNormal" align="right" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;text-align:right">
+          <span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;, serif; color: rgb(118, 113, 113);">&nbsp;</span></p>
+          </td>
+          </tr>
+          <tr style="height:10.0pt">
+          <td width="104" style="width:78.0pt; border:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:10.0pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <b><span style="font-size: 10pt; color: rgb(118, 113, 113);">Tel.</span></b><b><span style="font-size: 10pt; font-family: Arial, sans-serif; color: rgb(118, 113, 113);"></span></b></p>
+          </td>
+          <td width="134" colspan="2" style="width:100.35pt; border:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:10.0pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <b><span style="font-size: 10pt; color: rgb(118, 113, 113);">E-mail:</span></b></p>
+          </td>
+          <td width="94" style="width:70.85pt; padding:0in 5.4pt 0in 5.4pt; height:10.0pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <b><span style="font-size: 10pt; color: rgb(118, 113, 113);">Mobile:</span></b></p>
+          </td>
+          <td width="94" style="border:none; padding:0in 0in 0in 0in">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          &nbsp;</p>
+          </td>
+          </tr>
+          <tr style="height:3.4pt">
+          <td width="104" style="width:78.0pt; border:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:3.4pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <u><span style="font-size: 12pt; color: rgb(5, 99, 193);">+</span></u><u><span style="font-size: 9pt; color: rgb(5, 99, 193);">{{currentSignature.Telephone}} <br> Ext: {{currentSignature.Extension}}</span></u><b><span style="font-size: 9pt; font-family: Arial, sans-serif; color: rgb(47, 84, 150);"></span></b></p>
+          </td>
+          <td width="134" colspan="2" style="width:100.35pt; border:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:3.4pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <span style="font-size:12.0pt"><a href="mailto:dorehims@seder.sa"><span style="color: rgb(5, 99, 193);">{{currentSignature.user_email}}</span></a>
+          </span><b><span style="font-size: 9pt; font-family: Arial, sans-serif; color: rgb(47, 84, 150);"></span></b></p>
+          </td>
+          <td width="94" style="width:70.85pt; padding:0in 5.4pt 0in 5.4pt; height:3.4pt">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          <b><span style="font-size: 8pt; color: rgb(47, 84, 150);">+</span></b><u><span style="font-size: 8pt; color: rgb(5, 99, 193);">{{currentSignature.user_email}}</span></u><b><span style="font-size: 8pt; font-family: Arial, sans-serif; color: rgb(47, 84, 150);"></span></b></p>
+          </td>
+          <td width="94" style="border:none; padding:0in 0in 0in 0in">
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          &nbsp;</p>
+          </td>
+          </tr>
+          <tr height="0">
+          <td width="104" style="border:none"></td>
+          <td width="142" style="border:none"></td>
+          <td width="2" style="border:none"></td>
+          <td width="94" style="border:none"></td>
+          <td width="94" style="border:none"></td>
+          </tr>
+          </tbody>
+          </table>
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          &nbsp;</p>
+          <p class="x_MsoNormal" style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">
+          &nbsp;</p>
+          </div>
+          </div>
 
         <a class="badge badge-warning" routerLink="/signature/{{ currentSignature.id }}">
           Edit
@@ -32,3 +141,9 @@
       </div>
     </div>
   </div>
+
+  </div>
+
+  <!--  -->
+
+
