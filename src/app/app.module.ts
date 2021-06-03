@@ -13,6 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StyleBindingComponent } from './mosh/style-binding/style-binding.component';
 import { EventBindingComponent } from './mosh/event-binding/event-binding.component';
 import { EventFilteringComponent } from './mosh/event-filtering/event-filtering.component';
+import { TemplateVariablesComponent } from './mosh/template-variables/template-variables.component';
+import { TwoWayBindingComponent } from './mosh/two-way-binding/two-way-binding.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { EventFilteringComponent } from './mosh/event-filtering/event-filtering.
     ClassBindingComponent,
     StyleBindingComponent,
     EventBindingComponent,
-    EventFilteringComponent
+    EventFilteringComponent,
+    TemplateVariablesComponent,
+    TwoWayBindingComponent
   ],
   imports: [
     BrowserModule,
