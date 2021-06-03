@@ -18,6 +18,9 @@ import { TemplateVariablesComponent } from './mosh/template-variables/template-v
 import { TwoWayBindingComponent } from './mosh/two-way-binding/two-way-binding.component';
 import { PipesComponent } from './mosh/pipes/pipes.component';
 import { CustomPipesComponent } from './mosh/custom-pipes/custom-pipes.component';
+import { FavoriteComponent } from './mosh/exercise/favorite/favorite.component';
+import { TitleCaseComponent } from './mosh/exercise/title-case/title-case.component';
+import { TitleCasePipe } from './mosh/exercise/title-case.pipe';
 
 @NgModule({
   declarations: [
@@ -33,14 +36,18 @@ import { CustomPipesComponent } from './mosh/custom-pipes/custom-pipes.component
     TwoWayBindingComponent,
     PipesComponent,
     CustomPipesComponent,
-    SummaryPipe
+    SummaryPipe,
+    FavoriteComponent,
+    TitleCaseComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
