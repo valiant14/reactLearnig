@@ -1,3 +1,4 @@
+import { SummaryPipe } from './summary.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,6 +16,8 @@ import { EventBindingComponent } from './mosh/event-binding/event-binding.compon
 import { EventFilteringComponent } from './mosh/event-filtering/event-filtering.component';
 import { TemplateVariablesComponent } from './mosh/template-variables/template-variables.component';
 import { TwoWayBindingComponent } from './mosh/two-way-binding/two-way-binding.component';
+import { PipesComponent } from './mosh/pipes/pipes.component';
+import { CustomPipesComponent } from './mosh/custom-pipes/custom-pipes.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { TwoWayBindingComponent } from './mosh/two-way-binding/two-way-binding.c
     EventBindingComponent,
     EventFilteringComponent,
     TemplateVariablesComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    PipesComponent,
+    CustomPipesComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
