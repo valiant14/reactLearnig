@@ -21,6 +21,8 @@ import { CustomPipesComponent } from './mosh/custom-pipes/custom-pipes.component
 import { FavoriteComponent } from './mosh/exercise/favorite/favorite.component';
 import { TitleCaseComponent } from './mosh/exercise/title-case/title-case.component';
 import { TitleCasePipe } from './mosh/exercise/title-case.pipe';
+import { NgContentComponent } from './mosh/ng-content/ng-content.component';
+import { LikeComponent } from './mosh/like/like.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { TitleCasePipe } from './mosh/exercise/title-case.pipe';
     SummaryPipe,
     FavoriteComponent,
     TitleCaseComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    NgContentComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
