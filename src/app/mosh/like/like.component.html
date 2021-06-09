@@ -1,6 +1,12 @@
 <span class="glyphicon glyphicon-heart"
     [class.highlighted] = "isActive"
     (click)="onClick()"
-></span>
+    
+>{{likesCount}}</span>
 
-<span> {{likesCount}}</span>
+
+<span class="glyphicon glyphicon-heart"
+    [class.highlighted] = "isActive"
+    (click)="onDisClick()"
+    
+>{{dislikesCount}}</span>

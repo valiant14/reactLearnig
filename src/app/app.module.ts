@@ -23,6 +23,9 @@ import { TitleCaseComponent } from './mosh/exercise/title-case/title-case.compon
 import { TitleCasePipe } from './mosh/exercise/title-case.pipe';
 import { NgContentComponent } from './mosh/ng-content/ng-content.component';
 import { LikeComponent } from './mosh/like/like.component';
+import { NgIfComponent } from './mosh/ng-if/ng-if.component';
+import { NgSwitchComponent } from './mosh/ng-switch/ng-switch.component';
+import { NgForDirectiveComponent } from './mosh/ng-for-directive/ng-for-directive.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { LikeComponent } from './mosh/like/like.component';
     TitleCaseComponent,
     TitleCasePipe,
     NgContentComponent,
-    LikeComponent
+    LikeComponent,
+    NgIfComponent,
+    NgSwitchComponent,
+    NgForDirectiveComponent
   ],
   imports: [
     BrowserModule,
