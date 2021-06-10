@@ -29,6 +29,7 @@ import { NgForDirectiveComponent } from './mosh/ng-for-directive/ng-for-directiv
 import { NgForComponent } from './mosh/ng-for/ng-for.component';
 import { InputFormatDirective } from './mosh/input-format.directive';
 import { ContactFormComponent } from './mosh/contact-form/contact-form.component';
+import { PostComponent } from './crud/post/post.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,9 @@ import { ContactFormComponent } from './mosh/contact-form/contact-form.component
     NgForDirectiveComponent,
     NgForComponent,
     InputFormatDirective,
-    ContactFormComponent
+    ContactFormComponent,
+    PostComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import { ContactFormComponent } from './mosh/contact-form/contact-form.component
     FormsModule,
     HttpClientModule,
     NgbModule,
+    HttpClientModule,
     
   ],
   providers: [],
