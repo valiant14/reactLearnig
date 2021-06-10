@@ -26,6 +26,9 @@ import { LikeComponent } from './mosh/like/like.component';
 import { NgIfComponent } from './mosh/ng-if/ng-if.component';
 import { NgSwitchComponent } from './mosh/ng-switch/ng-switch.component';
 import { NgForDirectiveComponent } from './mosh/ng-for-directive/ng-for-directive.component';
+import { NgForComponent } from './mosh/ng-for/ng-for.component';
+import { InputFormatDirective } from './mosh/input-format.directive';
+import { ContactFormComponent } from './mosh/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import { NgForDirectiveComponent } from './mosh/ng-for-directive/ng-for-directiv
     LikeComponent,
     NgIfComponent,
     NgSwitchComponent,
-    NgForDirectiveComponent
+    NgForDirectiveComponent,
+    NgForComponent,
+    InputFormatDirective,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
